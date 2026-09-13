@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Performance Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="dashboard-header">
+            <h1>Student Performance Dashboard</h1>
+            <p>Interactive student academic performance dashboard</p>
+        </header>
+
+        <!-- FILTER SECTION -->
+        <section class="filter-section">
+
+            <div class="filter-group">
+                <label for="searchInput">Search Student</label>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter student name"
+                >
+            </div>
+
+            <div class="filter-group">
+                <label for="blockFilter">Block</label>
+                <select id="blockFilter">
+                    <option value="All">All</option>
+                    <option value="31-ITE-01">31-ITE-01</option>
+                    <option value="31-ITE-02">31-ITE-02</option>
+                    <option value="31-ITE-03">31-ITE-03</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="statusFilter">Academic Status</label>
+                <select id="statusFilter">
+                    <option value="All">All</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Passed">Passed</option>
+                    <option value="Needs Improvement">Needs Improvement</option>
+                    <option value="Failed">Failed</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button id="applyBtn">Apply Filters</button>
+                <button id="resetBtn" class="reset-button">Reset</button>
+            </div>
+
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="summary-section">
+
+            <div class="summary-card">
+                <h3>Class Average</h3>
+                <span id="classAverage">0.00</span>
+            </div>
+
+            <div class="summary-card">
+                <h3>Passing Students</h3>
+                <span id="passingCount">0</span>
+            </div>
+
+            <div class="summary-card">
+                <h3>Displayed Students</h3>
+                <span id="displayedCount">0</span>
+            </div>
+
+            <div class="summary-card">
+                <h3>Top Student</h3>
+                <span id="topStudent">None</span>
+            </div>
+
+        </section>
+
+        <!-- MESSAGE -->
+        <div id="messageArea"></div>
+
+        <!-- STUDENT LIST -->
+        <section>
+            <div id="studentList" class="student-list"></div>
+        </section>
+
+    </main>
+
+    <!-- Required ES Module -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
